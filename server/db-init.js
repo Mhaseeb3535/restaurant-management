@@ -1,13 +1,5 @@
-import pkg from "pg";
-const { Pool } = pkg;
-
-const pool = new Pool({
-  user: "postgres",
-  password: "mhrajp35",
-  host: "localhost",
-  port: 5432,
-  database: "restaurant",
-});
+import "dotenv/config";
+import pool from "./db.js";
 
 const initDB = async () => {
   try {

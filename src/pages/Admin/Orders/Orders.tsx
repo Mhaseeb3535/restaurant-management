@@ -11,7 +11,7 @@ import {
   Spinner,
   Table,
 } from "react-bootstrap";
-import api from "../../../services/api";
+import api, { getApiAssetUrl } from "../../../services/api";
 
 interface OrderItem {
   id: number;
@@ -395,7 +395,7 @@ function Orders() {
         </Modal.Header>
         <Modal.Body>
           {showScreenshot ? (
-            <img src={`http://localhost:5000${showScreenshot}`} alt="Payment Screenshot" className="img-fluid" />
+            <img src={getApiAssetUrl(showScreenshot)} alt="Payment Screenshot" className="img-fluid" />
           ) : (
             <p>No screenshot available.</p>
           )}

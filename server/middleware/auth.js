@@ -1,6 +1,11 @@
+import "dotenv/config";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "diego_kitchen_jwt_secret_2024";
+const JWT_SECRET = process.env.JWT_SECRET;
+
+if (!JWT_SECRET) {
+  throw new Error("JWT_SECRET is not configured");
+}
 
 export const authenticate = (req, res, next) => {
   const authHeader = req.headers.authorization;

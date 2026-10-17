@@ -18,7 +18,7 @@ import {
   FaLink,
   FaUpload,
 } from "react-icons/fa";
-import api from "../../../services/api";
+import api, { getApiAssetUrl } from "../../../services/api";
 
 interface GalleryItem {
   id: number;
@@ -46,8 +46,7 @@ function AdminGallery() {
 
   const categories = ["Food", "Restaurant", "Interior", "Events", "VIP", "Chef", "Dessert", "Pizza"];
 
-  const resolveImageUrl = (url: string) =>
-    url.startsWith("/uploads/") ? `http://localhost:5000${url}` : url;
+  const resolveImageUrl = (url: string) => getApiAssetUrl(url);
 
   useEffect(() => {
     const loadGallery = async () => {

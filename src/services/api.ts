@@ -1,11 +1,26 @@
 import axios from "axios";
 
 const browserApiBaseUrl =
-  typeof window !== "undefined"
+  typeof window !== "undefined" && import.meta.env.DEV
     ? `${window.location.protocol}//${window.location.hostname}:5000/api`
-    : "http://localhost:5000/api";
+    : "/api";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || browserApiBaseUrl;
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || browserApiBaseUrl;
+
+export function getApiAssetUrl(assetPath: string): string {
+  if (/^https?:\/\//i.test(assetPath)) {
+    return assetPath;
+  }
+
+  const apiOrigin = API_BASE_URL.replace(/\/api\/?$/, "");
+  const baseUrl =
+    apiOrigin || (typeof window !== "undefined" ? window.location.origin : "");
+  if (!baseUrl) {
+    return assetPath;
+  }
+  return new URL(assetPath, baseUrl).toString();
+}
 
 const api = axios.create({
   baseURL: API_BASE_URL,
