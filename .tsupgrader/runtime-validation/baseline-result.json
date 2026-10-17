@@ -1,0 +1,38 @@
+{
+  "planHash": "633a867684548bdbbd9ef4d3b72242e4f2d802a4d3d5691cc4ec3be063b44a32",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-08-01T19:51:54.5730320Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 4555,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "build-pass",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 2,
+        "outputSample": "\r\n\u003E restaurant-management@0.0.0 build\r\n\u003E tsc -b \u0026\u0026 vite build\r\n\r\nsrc/components/PaymentModal/PaymentModal.tsx(40,10): error TS6133: \u0027isUploading\u0027 is declared but its value is never read.\r\n",
+        "durationMs": 16934
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 1,
+        "outputSample": "npm error Missing script: \u0022test\u0022\r\nnpm error\r\nnpm error To see a list of scripts, run:\r\nnpm error   npm run\r\nnpm error A complete log of this run can be found in: C:\\Users\\DELL\\AppData\\Local\\npm-cache\\_logs\\2026-08-01T19_51_54_329Z-debug-0.log\r\n",
+        "durationMs": 974
+      }
+    ]
+  }
+}

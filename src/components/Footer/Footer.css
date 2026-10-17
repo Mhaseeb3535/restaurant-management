@@ -1,0 +1,26 @@
+.footer-section{
+    background:#111;
+    color:white;
+    padding:60px 0 20px;
+}
+
+.footer-section h5,
+.footer-section h3{
+    color:#ffc107;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.social-icons svg:hover{
+    color:#ffc107;
+    transition:.3s;
+}
+
+.footer-section hr{
+    border-color:#555;
+}

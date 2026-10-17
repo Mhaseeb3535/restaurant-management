@@ -1,0 +1,27 @@
+.featured-section {
+  background: #f8f9fa;
+}
+
+.food-card {
+  transition: 0.4s;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+}
+
+.food-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.food-card .card-title {
+  font-weight: bold;
+}
+
+.food-card .btn {
+  border-radius: 25px;
+}

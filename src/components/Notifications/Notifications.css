@@ -1,0 +1,128 @@
+.notification-bell__toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  font-size: 1.15rem;
+}
+
+.notification-bell__toggle:hover,
+.notification-bell__toggle:focus,
+.notification-bell__toggle:active {
+  background: rgba(200, 155, 60, 0.22) !important;
+  border-color: rgba(255, 193, 7, 0.45) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: none !important;
+}
+
+.notification-bell__badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 20px;
+  font-size: 0.65rem;
+  animation: notificationPulse 1.8s infinite;
+}
+
+.notification-bell__menu {
+  width: min(360px, calc(100vw - 24px));
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  animation: notificationDrop 0.22s ease;
+}
+
+.notification-bell__header,
+.notification-bell__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fffaf0;
+}
+
+.notification-bell__header {
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.notification-bell__footer {
+  justify-content: center;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.notification-bell__item {
+  padding: 14px 16px;
+  white-space: normal;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.notification-bell__item:last-of-type {
+  border-bottom: 0;
+}
+
+.notification-bell__item.is-unread {
+  background: linear-gradient(90deg, rgba(255, 243, 205, 0.65), rgba(255, 255, 255, 0.95));
+}
+
+.notification-bell__title,
+.notification-bell__message {
+  display: block;
+}
+
+.notification-bell__message {
+  margin-top: 6px;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.notification-bell__empty {
+  padding: 18px 16px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.notification-bell__link,
+.notification-bell__view-all {
+  border: 0;
+  background: transparent;
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.notification-bell__link:hover,
+.notification-bell__view-all:hover {
+  color: #8b6508;
+}
+
+@keyframes notificationDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes notificationPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}

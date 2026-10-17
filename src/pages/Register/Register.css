@@ -1,0 +1,191 @@
+/* Register Page - Luxury Restaurant Theme */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+.register-page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center center/cover no-repeat;
+  filter: blur(4px) brightness(0.3);
+  z-index: -1;
+}
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.register-card-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+.register-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.register-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.register-back-btn:hover {
+  background: rgba(255, 193, 7, 0.2);
+  border-color: #ffc107;
+  color: #ffc107;
+}
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.register-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 193, 7, 0.5);
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+}
+.register-header h2 {
+  color: #ffc107;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.register-header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+.register-input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+.register-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 5;
+}
+.register-input-group:focus-within .register-input-icon { color: #ffc107; }
+.register-input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px 14px 48px !important;
+  color: #fff !important;
+  font-size: 0.95rem !important;
+  height: auto !important;
+}
+.register-input::placeholder { color: rgba(255, 255, 255, 0.35); }
+.register-input:focus {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #ffc107 !important;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1) !important;
+}
+.register-password-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  z-index: 5;
+}
+.register-password-toggle:hover { color: #ffc107; }
+.register-submit-btn {
+  width: 100%;
+  padding: 14px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #ffc107, #ff9800) !important;
+  border: none !important;
+  color: #1a1a2e !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3) !important;
+}
+.register-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4) !important; }
+.register-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+.register-divider::before, .register-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+.register-divider span { padding: 0 15px; }
+.register-google-btn {
+  width: 100%;
+  padding: 12px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  font-size: 0.95rem !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+.register-google-btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffc107 !important;
+}
+.register-switch-text {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+.register-switch-link {
+  color: #ffc107;
+  font-weight: 600;
+  text-decoration: none;
+}
+.register-switch-link:hover { color: #ff9800; text-decoration: underline; }
+.register-alert {
+  background: rgba(220, 53, 69, 0.15) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  color: #ff6b6b !important;
+  border-radius: 10px !important;
+  font-size: 0.85rem !important;
+  padding: 10px 15px !important;
+}
+.register-alert-success.alert-success {
+  background: rgba(25, 135, 84, 0.15) !important;
+  border: 1px solid rgba(25, 135, 84, 0.3) !important;
+  color: #75b798 !important;
+}

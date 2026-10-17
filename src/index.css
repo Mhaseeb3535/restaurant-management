@@ -1,0 +1,135 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f9fa;
+  overflow-x: hidden;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.primary-btn {
+  background: #b8860b;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #8b6508;
+  color: white;
+}
+
+.container {
+  max-width: 1320px;
+}
+
+/* ==========================================
+   Scroll Animation Keyframes
+   ========================================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flipUp {
+  from { opacity: 0; transform: perspective(400px) rotateX(10deg) translateY(20px); }
+  to   { opacity: 1; transform: perspective(400px) rotateX(0) translateY(0); }
+}
+
+@keyframes slideUpBounce {
+  0%   { opacity: 0; transform: translateY(40px); }
+  60%  { transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   Animation Utility Classes
+   ========================================== */
+.animate-fade-up    { animation: fadeUp 0.6s ease-out forwards; }
+.animate-fade-down  { animation: fadeDown 0.6s ease-out forwards; }
+.animate-fade-left  { animation: fadeLeft 0.6s ease-out forwards; }
+.animate-fade-right { animation: fadeRight 0.6s ease-out forwards; }
+.animate-zoom-in    { animation: zoomIn 0.5s ease-out forwards; }
+.animate-flip-up    { animation: flipUp 0.6s ease-out forwards; }
+.animate-slide-up-bounce { animation: slideUpBounce 0.6s ease-out forwards; }
+
+/* Card hover animation */
+.animate-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.animate-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Stagger children animation for grid/cards */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeUp 0.5s ease-out forwards;
+}
+.stagger-children > *:nth-child(1)  { animation-delay: 0.05s; }
+.stagger-children > *:nth-child(2)  { animation-delay: 0.10s; }
+.stagger-children > *:nth-child(3)  { animation-delay: 0.15s; }
+.stagger-children > *:nth-child(4)  { animation-delay: 0.20s; }
+.stagger-children > *:nth-child(5)  { animation-delay: 0.25s; }
+.stagger-children > *:nth-child(6)  { animation-delay: 0.30s; }
+.stagger-children > *:nth-child(7)  { animation-delay: 0.35s; }
+.stagger-children > *:nth-child(8)  { animation-delay: 0.40s; }
+.stagger-children > *:nth-child(9)  { animation-delay: 0.45s; }
+.stagger-children > *:nth-child(10) { animation-delay: 0.50s; }
+
+/* Utility */
+.opacity-0 { opacity: 0; }

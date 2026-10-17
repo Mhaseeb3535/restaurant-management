@@ -1,0 +1,21 @@
+.reservation-section {
+    background: #f8f9fa;
+}
+
+.reservation-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.reservation-card .form-control,
+.reservation-card .form-select {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.reservation-card button {
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+}

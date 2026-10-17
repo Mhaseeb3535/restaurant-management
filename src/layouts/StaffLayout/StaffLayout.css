@@ -1,0 +1,44 @@
+.staff-layout{
+    display:flex;
+    min-height:100vh;
+    background:#f8f9fa;
+}
+
+.staff-sidebar{
+    width:260px;
+    background:#1c1c1c;
+    color:white;
+    padding:25px;
+}
+
+.logo{
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.staff-sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.staff-sidebar a{
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    transition:.3s;
+}
+
+.staff-sidebar a:hover{
+    background:#ffc107;
+    color:black;
+}
+
+.staff-content{
+    flex:1;
+    padding:40px;
+}

@@ -1,0 +1,46 @@
+.super-layout{
+    display:flex;
+    min-height:100vh;
+    background:#eef2f7;
+}
+
+.super-sidebar{
+    width:280px;
+    background:#111827;
+    color:white;
+    padding:25px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.super-sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.super-sidebar a{
+    text-decoration:none;
+    color:white;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:14px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.super-sidebar a:hover{
+    background:#ffc107;
+    color:black;
+}
+
+.super-content{
+    flex:1;
+    padding:40px;
+}

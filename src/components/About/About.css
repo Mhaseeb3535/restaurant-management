@@ -1,0 +1,25 @@
+.about-section{
+    background:white;
+}
+
+.about-section img{
+    transition:.5s;
+}
+
+.about-section img:hover{
+    transform:scale(1.04);
+}
+
+.about-icon{
+    font-size:40px;
+    color:#d4a017;
+    margin-bottom:10px;
+}
+
+.about-section h3{
+    font-weight:bold;
+}
+
+.about-section p{
+    line-height:1.8;
+}

@@ -1,0 +1,164 @@
+/* ==========================================
+   Reservation Page Styles
+   ========================================== */
+
+/* Hero Banner */
+.reservation-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: -1.5rem;
+}
+
+.reservation-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reservation-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.reservation-hero .hero-divider {
+  width: 80px;
+  height: 4px;
+  background: #ffc107;
+  margin: 1.2rem auto;
+  border-radius: 2px;
+}
+
+/* Info Cards Section */
+.reservation-info-section {
+  background: #f8f9fa;
+}
+
+.reservation-info-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.reservation-info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-info-icon {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+.reservation-info-card h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.reservation-info-card p {
+  color: #6c757d;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Why Dine With Us Section */
+.why-dine-section {
+  background: white;
+}
+
+.why-dine-card {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  border: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.why-dine-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-dine-icon {
+  font-size: 3rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+.why-dine-card h5 {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.why-dine-card p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.reservation-cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 0;
+  text-align: center;
+  color: white;
+}
+
+.reservation-cta h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.reservation-cta p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.reservation-cta .cta-divider {
+  width: 60px;
+  height: 3px;
+  background: #ffc107;
+  margin: 1rem auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reservation-hero {
+    min-height: 50vh;
+  }
+
+  .reservation-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .reservation-hero p {
+    font-size: 1rem;
+  }
+
+  .reservation-cta h2 {
+    font-size: 2rem;
+  }
+}
