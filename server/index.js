@@ -35,13 +35,7 @@ const allowedOrigins =
 
 // Middleware
 app.use(cors({
-  origin(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-      return;
-    }
-    callback(null, false);
-  },
+  origin:true,
   credentials: true,
 }));
 app.use(express.json({ limit: "10mb" }));
@@ -67,6 +61,10 @@ app.use("/api/gallery", galleryRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/upload", uploadRoutes);
+
+app.get("/", (req, res) => {
+  res.json({ status: "ok", service: "restaurant-management-api" });
+});
 
 // Health check
 app.get("/api/health", (req, res) => {
